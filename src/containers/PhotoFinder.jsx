@@ -3,7 +3,7 @@ import React, { useState, useRef, useEffect } from 'react';
 import TextInput from '../components/TextInput';
 import Polaroid from '../components/Polaroid';
 import { fetchImages } from '../utils/apiRequests';
-import { useDebounce } from '../utils/customHooks';
+import useDebounce from '../utils/customHooks';
 
 const PhotoFinder = () => {
   const [state, setState] = useState({ fetchedImages: null });

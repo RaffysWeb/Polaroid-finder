@@ -19,7 +19,8 @@ TextInput.defaultProps = {
 TextInput.propTypes = {
   name: PropTypes.string.isRequired,
   value: PropTypes.string,
-  placeholder: PropTypes.string,
+  placeholder: PropTypes.string.isRequired,
+  forwardedRef: PropTypes.instanceOf(Object).isRequired,
   onChange: PropTypes.func.isRequired
 };
 
