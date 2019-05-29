@@ -28,14 +28,15 @@ const StyledInput = styled.input`
 
 TextInput.defaultProps = {
   value: '',
-  placeholder: ''
+  placeholder: '',
+  forwardedRef: null
 };
 
 TextInput.propTypes = {
   name: PropTypes.string.isRequired,
   value: PropTypes.string,
   placeholder: PropTypes.string,
-  forwardedRef: PropTypes.instanceOf(Object).isRequired,
+  forwardedRef: PropTypes.instanceOf(Object),
   onChange: PropTypes.func.isRequired
 };
 
