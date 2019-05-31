@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect, useCallback } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import Loader from 'react-loader-spinner';
 import shortid from 'shortid';
 import styled from 'styled-components';
