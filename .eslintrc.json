@@ -4,7 +4,10 @@
   "rules": {
     "prettier/prettier": ["error"],
     "camelcase": [2, { "properties": "never" }],
-    "ignoreDestructuring": true,
+    "ignoreDestructuring": true
+  },
+  "env": {
+    "jest": true,
     "browser": true
   }
 }

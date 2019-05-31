@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import moment from 'moment';
 import shortid from 'shortid';
+import { useSpring, animated } from 'react-spring';
 
 const Polaroid = ({ item, fetchByTag }) => {
   const {
@@ -13,11 +14,13 @@ const Polaroid = ({ item, fetchByTag }) => {
     media: { m }
   } = item;
 
+  const props = useSpring({ from: { opacity: 0 }, to: { opacity: 1 }, config: { duration: 1000 } });
+
   const newTags = tags.split(' ').splice(0, 4);
   const parsedName = author.match(/(?:"[^"]*"|^[^"]*$)/)[0].replace(/"/g, '');
 
   return (
-    <StyledPolaroid>
+    <StyledPolaroid style={props}>
       <a rel="noopener noreferrer" target="_blank" href={link}>
         <ImageContainer image={m} />
       </a>
@@ -39,7 +42,7 @@ const Polaroid = ({ item, fetchByTag }) => {
   );
 };
 
-const StyledPolaroid = styled.div`
+const StyledPolaroid = styled(animated.div)`
   width: 15rem;
   height: 20rem;
   border-radius: 0.05rem;

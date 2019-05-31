@@ -1,0 +1,28 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`PhotoFinder tests PhotoFinder it matches the snapshot 1`] = `
+<section
+  className="sc-bxivhb ijobHS"
+>
+  <header>
+    <img
+      alt=""
+      src="/images/polaroid.svg"
+    />
+    <h1>
+      Polaroid Finder
+    </h1>
+  </header>
+  <input
+    className="sc-bdVaJa kTNRlN"
+    name="searchInput"
+    onChange={[Function]}
+    placeholder="Cute dogs..."
+    type="text"
+    value=""
+  />
+  <h3>
+    Start typing to search...
+  </h3>
+</section>
+`;

@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect } from 'react';
+import React, { useState, useRef, useEffect, useCallback } from 'react';
 import Loader from 'react-loader-spinner';
 import shortid from 'shortid';
 import styled from 'styled-components';
@@ -39,11 +39,14 @@ const PhotoFinder = () => {
   }, [debouncedSearchValue]);
 
   const fetchByTag = tag => {
-    setState(oldState => ({
-      ...oldState,
-      debouncedSearchValue: tag,
-      searchInput: tag
-    }));
+    if (tag !== searchInput) {
+      setState(oldState => ({
+        ...oldState,
+        debouncedSearchValue: tag,
+        searchInput: tag,
+        loading: true
+      }));
+    }
   };
 
   const onChange = e => {

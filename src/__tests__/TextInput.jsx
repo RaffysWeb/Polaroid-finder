@@ -2,13 +2,9 @@ import React from 'react';
 import { create } from 'react-test-renderer';
 import TextInput from '../components/TextInput';
 
-describe('Inputs', () => {
-  const testFunc = () => {
-    return true;
-  };
-
+describe('TextInput tests', () => {
   test('TextInput it matches the snapshot', () => {
-    const component = create(<TextInput name="test" onChange={testFunc} />).toJSON();
+    const component = create(<TextInput name="test" onChange={jest.fn()} />).toJSON();
     expect(component).toMatchSnapshot();
   });
 });

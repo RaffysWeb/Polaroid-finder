@@ -1,0 +1,38 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Polaroid tests Polaroid it matches the snapshot 1`] = `
+<div
+  className="sc-bdVaJa gNOWfD"
+  style={
+    Object {
+      "opacity": 0,
+    }
+  }
+>
+  <a
+    href="www.google.com"
+    rel="noopener noreferrer"
+    target="_blank"
+  >
+    <div
+      className="sc-bwzfXH hlYnYe"
+    />
+  </a>
+  <button
+    className="tag-button"
+    onClick={[Function]}
+    type="button"
+  >
+    #
+    cat
+  </button>
+  <footer>
+    <p>
+      me
+    </p>
+    <p>
+      31/05/2019
+    </p>
+  </footer>
+</div>
+`;
